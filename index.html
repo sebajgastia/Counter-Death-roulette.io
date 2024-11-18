@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death roulette</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="name-input-container">
+      <h1>Death roulette LIFE COUNTER</h1>
+      <input type="text" id="player1-name" placeholder="Nombre Jugador 1" />
+      <input type="text" id="player2-name" placeholder="Nombre Jugador 2" />
+      <button id="start-game">Iniciar Juego</button>
+    </div>
+
+    <div class="players-container" style="display: none;">
+      <!-- Jugador 1 -->
+      <div id="player1-container" class="player">
+        <h2 id="player1-label"></h2>
+        <div id="player1-lives" class="lives">6</div>
+        <button id="player1-decrease" class="btn">Restar vida</button>
+        <div id="player1-increase" class="btn-increase">BOTIQUIN!</div>
+        <div id="player1-death" class="death-message" style="display: none;">
+          <img src="you_died.png" alt="You Died">
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Jugador 2 -->
+      <div id="player2-container" class="player">
+        <h2 id="player2-label"></h2>
+        <div id="player2-lives" class="lives">6</div>
+        <button id="player2-decrease" class="btn">Restar vida</button>
+        <div id="player2-increase" class="btn-increase">BOTIQUIN!</div>
+        <div id="player2-death" class="death-message" style="display: none;">
+          <img src="you_died.png" alt="You Died">
+        </div>
+      </div>
+    </div>
+
+    <div id="random-image-container" class="random-image"></div>
+
+    <div class="controls" style="display: none;">
+      <button id="restart" class="btn">Reiniciar Juego</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
